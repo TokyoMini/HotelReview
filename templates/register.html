@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block hotel %} Register {% endblock hotel %}
+{% block body %}
+
+<div class="container my-3" style="color:rgb(255, 255, 255);">
+    <h2 style="color:rgb(255, 255, 255);">Register Yourself Reviewer!!</h2>
+    <form action="/register" method="POST" id="Register">
+
+        {{form.hidden_tag()}}
+        <label for="Username" class="form-label">Username</label>
+        {{form.username(class='form-control') }}
+        <form for="Password" class="form-label">Password</label>
+        {{form.password(class='form-control')}}
+        <br>{{form.submit( class="btn btn-primary")}}</br>
+      </form>
+</div>
+{% endblock body %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block hotel %} Login {% endblock hotel %}
+
+{% block body %}
+<div class="container my-3" style="color:rgb(255, 255, 255);">
+    <h2>Login here!</h2>
+    <form action="/login" method="POST" id='Login'>
+        
+      {{form.hidden_tag()}}
+      <label for="Username" class="form-label">Username</label>
+      {{form.username(class='form-control') }}
+      <br></br>
+      <label for="Password" class="form-label">Password</label>
+      {{form.password(class='form-control')}}
+      <br>{{form.submit( class="btn btn-primary")}}</br>
+        <a class="nav-link" href="/register" id='register' style="color: rgb(255, 255, 255); padding: 0.6pt;" >Don't Have User! Register here.</a>
+      </form>
+</div>
+{% endblock body %}
